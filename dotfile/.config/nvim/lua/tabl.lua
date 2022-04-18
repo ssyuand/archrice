@@ -15,5 +15,4 @@ local key_map = function(mode, key, result)
 end
 key_map('n', '<TAB>', '<cmd>BufferLineCycleNext<CR>')
 key_map('n', '<s-tab>', '<cmd>BufferLineCyclePrev<cr>')
-key_map('n', '<C-w>', '<cmd>bd!<cr>')
 --key_map('n', '', '<cmd>BufferLineCyclePrev<CR>')

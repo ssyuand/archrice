@@ -28,7 +28,6 @@ cp ~/ohmyarch/dotfile/config.h ~/library/dwm/config.h
 cp ~/ohmyarch/dotfile/patch/*.diff ~/library/dwm
 cd ~/library/dwm 
 patch -p1 < ru_fib.diff
-patch -p1 < swallow.diff
 patch -p1 < ru_gaps.diff
 patch -p1 < uselessgap.diff
 patch -p1 < pertag.diff

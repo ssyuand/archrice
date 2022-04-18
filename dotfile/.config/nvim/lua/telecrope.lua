@@ -29,8 +29,8 @@ vim.api.nvim_set_keymap('n', '<leader>fw', ':Telescope grep_string<CR>', { norem
 
 --compile...
 _G.compile = function()
-	Option = vim.fn.input("do u want use less? (y/n):")
 	if vim.bo.filetype == "c" or vim.bo.filetype == "cpp" then
+		Option = vim.fn.input("do u want use less? (y/n):")
 		if Option == "n" then
 			vim.cmd([[exec 'silent !g++ -o a.out %']])
 			vim.cmd([[exec "silent !alacritty -e bash -c './a.out'"]])
@@ -41,6 +41,7 @@ _G.compile = function()
 			vim.cmd([[exec 'silent !rm a.out']])
 		end
 	elseif vim.bo.filetype == "java" then
+		Option = vim.fn.input("do u want use less? (y/n):")
 		if Option == "n" then
 			vim.cmd([[exec 'silent !javac %']])
 			vim.cmd([[exec "silent !alacritty -e bash -c 'java % && exit'"]])

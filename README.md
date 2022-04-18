@@ -1,4 +1,1 @@
 # ohmyarch
-# archrice
-# archrice
-# archrice

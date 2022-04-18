@@ -21,6 +21,6 @@ xset r rate 166 50
 brillo -c -S 5
 
 /usr/bin/pactl load-module module-bluetooth-discover
-exec fcitx5 &
 exec sxhkd &
+exec fcitx5 &
 exec dwm

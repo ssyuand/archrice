@@ -38,8 +38,12 @@ cursor:
   style:  block
   # If this is `true`, the cursor will be rendered as a hollow box when the
   unfocused_hollow: true
-    #shell:
-    #program: /usr/local/bin/fish
+shell:
+   program: /bin/bash
+   args:
+      - -l
+      - -c
+      - "tmux attach || tmux"
 mouse:
   #Click settings
     double_click: { threshold: 300 }
@@ -91,5 +95,5 @@ colors:
     cyan:    '#7fdbca'
     white:   '#ffffff'
 key_bindings:
-  - { key: N,   mods: Alt, action: SpawnNewInstance }
+  - { key: N,   mods: Alt, action: SpawnNewInstance}
 

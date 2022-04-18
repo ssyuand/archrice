@@ -17,6 +17,7 @@ yes | sudo pacman -S
 	"git"
 	"htop"
 	"trash-cli"
+	"tmux"
 	"xorg-server"
 	"xorg-xsetroot"
 	"xorg-xinit"

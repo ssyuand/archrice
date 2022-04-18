@@ -18,10 +18,10 @@ shopt -s autocd
 alias ..='cd ..'
 alias gs="git status"
 alias rm='trash-put'
-alias ducks='du -cks * | sort -n -r | head -n 10'
+alias duck='du -cks * | sort -n -r | head -n 20'
+alias duak='du -ak | sort -n -r | head -n 20'
 alias l='ls -A -CF --color=auto'
-alias ls='ls -A -CF --color=auto'
-alias ll='ls -lh --color=auto'
+alias ll='ls -A -lh --color=always | sort -nr'
 alias vi='nvim'
 PS1="\[\e[0;31m\]\u@\[\e[m\e[0;34m\]\h\[\e[m \e[0;32m\]\W\$(parse_git_branch) \$ \[\e[m\]"
 

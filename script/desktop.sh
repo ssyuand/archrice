@@ -10,7 +10,7 @@ cp -r ~/ohmyarch/dotfile/.config ~/
 sudo cp -r ~/ohmyarch/dotfile/.config /root
 
 # fonts
-sudo tar -xvf ~/ohmyarch/dotfile/fonts.tar -C /usr/share/fonts/
+sudo tar -xvf ~/ohmyarch/dotfile/font.tar -C /usr/share/fonts/
 
 # xinitrc
 cp ~/ohmyarch/dotfile/.xinitrc ~/

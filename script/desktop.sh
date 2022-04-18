@@ -18,6 +18,9 @@ cp ~/ohmyarch/dotfile/.xinitrc ~/
 # .gitconfig
 cp ~/ohmyarch/dotfile/.gitconfig ~/
 
+# tmux
+cp ~/ohmyarch/dotfile/.tmux.conf ~/
+
 # dwm
 echo "DWM" | figlet
 git clone https://git.suckless.org/dwm ~/library/dwm

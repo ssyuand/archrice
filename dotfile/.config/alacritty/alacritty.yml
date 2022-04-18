@@ -43,8 +43,7 @@ shell:
    args:
       - -l
       - -c
-        #TODO:add user input to choise what section want to open(now all the default), maby a script
-      - "tmux attach -t default || tmux new -s default"
+      - "read -p 'session name:' sname && tmux attach -t $sname || tmux new -s $sname"
 mouse:
   #Click settings
     double_click: { threshold: 300 }
@@ -99,6 +98,7 @@ key_bindings:
    # New and close tab in tmux.
   - { key: T,        mods: Control,       chars: "\x01\x63" }
   - { key: W,        mods: Control,       command: { program: "/sbin/tmux", args: ["kill-pane"] } }
+
   # program:... is $which tmux in ur pc
   - { key: Key1,     mods: Control, command: { program: "/sbin/tmux", args: ["select-window", "-t", "1"] } }
   - { key: Key2,     mods: Control, command: { program: "/sbin/tmux", args: ["select-window", "-t", "2"] } }

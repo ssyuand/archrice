@@ -45,21 +45,25 @@ _G.compile = function()
 		Option = vim.fn.input("do u want use less? (y/n):")
 		if Option == "n" then
 			vim.cmd([[exec 'silent !g++ -o a.out %']])
-			vim.cmd([[exec "silent !alacritty -e bash -c './a.out'"]])
+			--vim.cmd([[exec "silent !alacritty -e bash -c './a.out'"]])
+			vim.cmd([[exec "silent terminal ./a.out"]])
 			vim.cmd([[exec 'silent !rm a.out']])
 		elseif Option == "y" then
 			vim.cmd([[exec 'silent !g++ -o a.out %']])
-			vim.cmd([[exec "silent !alacritty -e bash -c './a.out | less' && bash"]])
+			--vim.cmd([[exec "silent !alacritty -e bash -c './a.out | less' && bash"]])
+			vim.cmd([[exec "silent terminal ./a.out | less"]])
 			vim.cmd([[exec 'silent !rm a.out']])
 		end
 	elseif vim.bo.filetype == "java" then
 		Option = vim.fn.input("do u want use less? (y/n):")
 		if Option == "n" then
 			vim.cmd([[exec 'silent !javac %']])
-			vim.cmd([[exec "silent !alacritty -e bash -c 'java % && exit'"]])
+			--vim.cmd([[exec "silent !alacritty -e bash -c 'java % && exit'"]])
+			vim.cmd([[exec "silent terminal java %"]])
 		elseif Option == "y" then
 			vim.cmd([[exec 'silent !javac %']])
-			vim.cmd([[exec "silent !alacritty -e bash -c 'java % | less && exit'"]])
+			--vim.cmd([[exec "silent !alacritty -e bash -c 'java % | less && exit'"]])
+			vim.cmd([[exec "silent terminal java % | less"]])
 		end
 	end
 end

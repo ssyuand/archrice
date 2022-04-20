@@ -11,6 +11,7 @@ yes | sudo pacman -S
 	"fcitx5-chewing"
 	"fcitx5-config-qt"
 	"fzf"
+	"fd"
 	"rofi"
 	"ninja"
 	"neovim"

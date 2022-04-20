@@ -27,8 +27,8 @@ git clone https://git.suckless.org/dwm ~/library/dwm
 cp ~/ohmyarch/dotfile/config.h ~/library/dwm/config.h
 cp ~/ohmyarch/dotfile/patch/*.diff ~/library/dwm
 cd ~/library/dwm 
-patch -p1 < ru_fib.diff
-patch -p1 < ru_gaps.diff
+#patch -p1 < ru_gaps.diff
+patch -p1 < ru_fib_gap.diff
 patch -p1 < uselessgap.diff
 patch -p1 < pertag.diff
 patch -p1 < fackfullscreen.diff

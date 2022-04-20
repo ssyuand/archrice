@@ -10,6 +10,7 @@ yes | sudo pacman -S
 	"fcitx5-gtk"
 	"fcitx5-chewing"
 	"fcitx5-config-qt"
+	"fzf"
 	"rofi"
 	"ninja"
 	"neovim"

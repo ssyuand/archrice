@@ -12,11 +12,23 @@ require('telescope').setup {
 		prompt_prefix = " ",
 		selection_caret = " ",
 		entry_prefix = "  ",
-		borderchars = { '─', '│', '─', '│', '┼', '┼', '┼', '┼' },
 		set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
+		initial_mode = "insert",
+		path_display = { "truncate" },
 	},
-	extensions = {}
+	file_sorter = require("telescope.sorters").get_fuzzy_file,
+	generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
+	extensions = {
+		fzf = {
+			fuzzy = true, -- false will only do exact matching
+			override_generic_sorter = true, -- override the generic sorter
+			override_file_sorter = true, -- override the file sorter
+			case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+			-- the default case_mode is "smart_case"
+		}
+	}
 }
+require('telescope').load_extension('fzf')
 
 --Allow insert the search_dirs first
 _G.open_telescope = function()

@@ -25,6 +25,7 @@ return require('packer').startup(function()
 	use 'hrsh7th/vim-vsnip'
 
 	use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use { 'syuanda/makabaka' }
 
 	vim.cmd [[colorscheme catppuccin]]

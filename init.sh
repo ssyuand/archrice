@@ -25,6 +25,8 @@ elif [[ $1 == "neovim" ]]; then
 	install_neovim
 elif [[ $1 == "lsp" ]]; then
 	install_ls
+elif [[ $1 == "aur" ]]; then
+	install_aur
 elif [[ $1 == "wireless" ]]; then
 	install_wireless
 else

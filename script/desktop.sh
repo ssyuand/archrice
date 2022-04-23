@@ -65,6 +65,11 @@ sudo cp ~/ohmyarch/dotfile/30-touchpad.conf /etc/X11/xorg.conf.d/
 xdg-settings set default-web-browser firefox.desktop
 
 }
+install_aur(){
+	git clone https://aur.archlinux.org/yay.git ~/library/yay
+	cd ~/library/yay
+	makepkg -si --noconfirm
+}
 install_wireless() {
 	sudo pacman -Sy bluez bluez-utils pulseaudio-bluetooth pavucontrol sbc --noconfirm
 	alsa-lib alsa-plugins alsa-utils -- noconfirm

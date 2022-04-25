@@ -18,7 +18,7 @@ picom --experimental-backends -b
 xset r rate 166 50
 
 # brightness minimum
-brillo -c -S 5
+brillo -c -S 1
 
 /usr/bin/pactl load-module module-bluetooth-discover
 exec sxhkd &

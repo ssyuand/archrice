@@ -39,6 +39,9 @@ end
 key_map('n', ';', ':') --Let (; = :)
 key_map('v', '<C-c>', '"+yy') --need install xclip
 
+--no auto-comment
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 --hide "~"
 vim.cmd([[set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾]]);
 --vim.cmd([[hi EndOfBuffer guifg=#011627]])

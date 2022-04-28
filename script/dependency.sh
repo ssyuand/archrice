@@ -13,6 +13,7 @@ yes | sudo pacman -S
 	"fzf"
 	"fd"
 	"rofi"
+	"netctl"
 	"ninja"
 	"neovim"
 	"nerd-fonts"
